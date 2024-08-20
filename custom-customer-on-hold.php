@@ -4,11 +4,11 @@ defined('ABSPATH') || exit;
 /*
  * @hooked WC_Emails::email_header() Output the email header
  */
-add_action('woocommerce_email_header', function ($email_heading, $email) {
-    echo '<div style="background-color: #0081c7; padding: 20px; color: #ffffff;">';
-    echo '<h1>' . esc_html($email_heading) . '</h1>';
-    echo '</div>';
-}, 10, 2);
+// add_action('woocommerce_email_header', function ($email_heading, $email) {
+//     echo '<div style="background-color: #0081c7; padding: 20px; color: #ffffff;">';
+//     echo '<h1>' . esc_html($email_heading) . '</h1>';
+//     echo '</div>';
+// }, 10, 2);
 
 do_action('woocommerce_email_header', $email_heading, $email); ?>
 
@@ -46,4 +46,3 @@ do_action('woocommerce_email_header', $email_heading, $email); ?>
  * @hooked WC_Emails::email_footer() Output the email footer
  */
 do_action('woocommerce_email_footer', $email);
-
